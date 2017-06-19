@@ -1,0 +1,25 @@
+<h1>{{title}}</h1>
+    <h2>My customers</h2>
+    <!-- <ul class="customers">
+       <li *ngFor="let customer of customers"
+        [class.selected]="customer === selectedCustomer"
+        (click)="onSelect(customer)">
+        <span class="badge">{{customer.id}}</span> {{customer.name}}
+      </li> 
+
+    </ul>
+    <customer-detail [customer]="selectedCustomer"></customer-detail> -->
+
+   <h3>Customer Details</h3>
+		<table>
+			  <tr><th> Id</th> <th>Name</th><th>Phone</th><th>Address</th><th></th><th></th></tr>
+			  <tr *ngFor="let customer of customers" >
+			    <td>{{customer.id}}</td> 
+			    	<td>{{customer.name}}</td> 
+			    		<td>{{customer.phone}}</td>
+			    			<td>{{customer.address}}</td>
+			  	<td><button type="button" (click)="loadCustomerToEdit(customer.id)">Edit</button> </td> 
+				<td><button type="button" (click)="deleteCustomer(customer.id)">Delete</button></td>
+			  </tr>
+		</table>
+
